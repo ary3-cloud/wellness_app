@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="#47E91E63"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartExercise">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Exercise"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_margin="20dp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-condensed-light"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/image8"
+        android:scaleType="centerCrop"
+        android:layout_margin="50dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Walking is also considered as an exercise since it involves stretching of ones legs.\n For beginners it is important to note that one could do exercise without equipment and still keep fit."
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Tips"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:backgroundTint="#E91E63"
+
+        />
+
+</LinearLayout>

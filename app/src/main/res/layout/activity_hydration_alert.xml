@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#48E91E63"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HydrationAlert">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hydration Alert"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_margin="20dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textAlignment="center"
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/hydration"
+        android:scaleType="centerCrop"
+        android:layout_margin="30dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Water is life the essential process of replacing bodily fluids, crucial for maintaining cellular function, regulating temperature, and lubricating joints"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#E91E63"
+        android:text="Hydration Tips"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="20sp"
+        android:id="@+id/tips"
+
+        />
+
+
+</LinearLayout>

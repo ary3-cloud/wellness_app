@@ -111,6 +111,31 @@
 
            />
 
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:backgroundTint="#E91E63"
+           android:text="Weekly Goals"
+           android:fontFamily="sans-serif-condensed-light"
+           android:textSize="20sp"
+           android:id="@+id/goals"
+
+           />
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:backgroundTint="#E91E63"
+           android:text="Check Progress"
+           android:fontFamily="sans-serif-condensed-light"
+           android:textSize="20sp"
+           android:id="@+id/check"
+
+
+           />
+
 
 
    </LinearLayout>
