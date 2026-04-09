@@ -1,14 +1,25 @@
  package com.mary.chui_wellnessapp
 
 import android.content.Intent
+
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
+ import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+ class MainActivity : AppCompatActivity() {
+//     the variable is only accessed in this class
+//     VARIABLE TO STORE AD ONCE ITS LOADS
+     private var mInterstitialAd: InterstitialAd?=null
 
-class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,6 +29,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        MobileAds.initialize(this)
+        val adView = findViewById<AdView>(R.id.adView)
+        val adRequest= AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
+//   load the interstitial add
+        loadInterstitialAd()
+
+
+
+
 //        Healthy recipe intent
 //        finding the views from the layout using their ids
 
@@ -30,6 +53,7 @@ class MainActivity : AppCompatActivity() {
 
             val recipeIntent= Intent(applicationContext,HealthyRecipes::class.java)
             startActivity(recipeIntent)
+            showInterstitialAd()
         }
 
 
@@ -48,11 +72,13 @@ class MainActivity : AppCompatActivity() {
         meditation.setOnClickListener {
             val meditationIntent= Intent(applicationContext, Meditation::class.java)
             startActivity(meditationIntent)
+//            show interstitial ad
+            showInterstitialAd()
         }
 
 //        hydration alert
         val hydration=findViewById<Button>(R.id.hydration)
-//        SET ONCLICK LISENER
+//        SET ONCLICK listener
         hydration.setOnClickListener {
             val hydrationIntent= Intent(applicationContext,HydrationAlert::class.java)
             startActivity(hydrationIntent)
@@ -87,4 +113,37 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-}
+
+     fun loadInterstitialAd() {
+         val adRequest = AdRequest.Builder().build()
+
+         InterstitialAd.load(
+             this,
+             "ca-app-pub-3940256099942544/1033173712", // Test ID
+             adRequest,
+             object : InterstitialAdLoadCallback() {
+
+                 override fun onAdLoaded(ad: InterstitialAd) {
+                     mInterstitialAd = ad
+                 }
+
+                 override fun onAdFailedToLoad(error: LoadAdError) {
+                     mInterstitialAd = null
+                 }
+             }
+         )
+     }
+     //Show Interstitial ad
+     fun showInterstitialAd() {
+         if (mInterstitialAd != null) {
+             mInterstitialAd?.show(this)
+         }
+     }
+
+
+
+
+
+
+
+ }
