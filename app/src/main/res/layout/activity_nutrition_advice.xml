@@ -34,4 +34,27 @@
 
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eat a balanced, varied diet by filling half your plate with colorful fruits and vegetables, one-quarter with lean protein (fish, beans, nuts), and one-quarter with whole grains.\nPrioritize whole foods over processed items, limit added salt and sugar, and stay hydrated with water. Essential tips include using healthy oils like olive oil and maintaining regular meal times."
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#E91E63"
+        android:text="Meal Planning"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="20sp"
+        android:id="@+id/food"
+
+        />
+
+
+
 </LinearLayout>

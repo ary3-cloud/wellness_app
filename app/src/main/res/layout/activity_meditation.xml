@@ -31,4 +31,15 @@
 
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+        android:text="Meditation is a mind-body practice that uses techniques like focused attention, deep breathing, and mindfulness to reduce stress, improve focus, and enhance emotional well-being"
+
+        />
+
+
+
 </LinearLayout>
